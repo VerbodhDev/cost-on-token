@@ -2,8 +2,8 @@
 
 - **Source:** https://claude.ai/artifact/9Ud9iisBP4AzuxbKbcjDyw (public page by someone outside Acme, copied as text)
 - **Code from the page:** [compress_hook.py](../reference/original-hook/compress_hook.py) · [settings-snippet.json](../reference/original-hook/settings-snippet.json). Not reviewed or installed here.
-- **Our version:** [implementation/hooks/](../implementation/hooks/), tried and uninstalled; see [03-trial-on-acme.md](03-trial-on-acme.md).
-- **Our own numbers to compare:** [02-rtk-savings.md](02-rtk-savings.md) (rtk, not this hook)
+- **Our version:** [implementation/hooks/](../implementation/hooks/), tried and uninstalled; see [02-trial-on-acme.md](02-trial-on-acme.md).
+- **Our own numbers to compare:** [rtk/rtk-savings.md](../rtk/rtk-savings.md) (rtk, not this hook)
 
 Claude Code · PostToolUse hook · Sonnet 5.5
 

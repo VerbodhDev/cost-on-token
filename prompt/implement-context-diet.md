@@ -22,7 +22,7 @@ prove it works, and report back. Work in this order and stop where I say stop.
 
 **Step 1. Read the reference**
 1. Read `<PATH-TO-THIS-REPO>/README.md`, then `docs/01-source-claude-context-diet.md`,
-   `docs/02-rtk-savings.md` and `docs/03-trial-on-acme.md`.
+   `docs/02-trial-on-acme.md` and `rtk/rtk-savings.md`.
 2. Read `implementation/hooks/compress-tool-output.py` and `install-compress-hook.py` in full.
    Ignore `reference/original-hook/`; it is the unreviewed original, kept for comparison.
 3. Tell me in five bullets or fewer what the hook does, what it never compresses, and what it

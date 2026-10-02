@@ -6,7 +6,7 @@
 
 ## Why it was tried
 
-[02-rtk-savings.md](02-rtk-savings.md) showed rtk cutting only about 25% of tool output inside this
+[rtk/rtk-savings.md](../rtk/rtk-savings.md) showed rtk cutting only about 25% of tool output inside this
 folder (3.88M raw → 2.92M sent), and 80% of runs had no rtk filter at all. `rtk gain` claims
 95.6%, but six bogus grep rows logged at ~123M tokens make that number wrong.
 

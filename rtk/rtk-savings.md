@@ -1,6 +1,6 @@
 # What rtk actually saves
 
-- **Tool:** [implementation/tools/rtk-savings.py](../implementation/tools/rtk-savings.py), reads rtk's own history database
+- **Tool:** [tool/rtk-savings.py](tool/rtk-savings.py), reads rtk's own history database
 - **Data:** one Windows laptop, rtk 0.38, about three months of runs
 
 ## Result
@@ -32,4 +32,4 @@
 | Test and build logs | 92,393 | 24,529 | -73.5% |
 | Cloud and infra | 17,770 | 2,825 | -84.1% |
 
-This is what led to trying the context-diet hook: [03-trial-on-acme.md](03-trial-on-acme.md).
+This is what led to trying the context-diet hook: [docs/02-trial-on-acme.md](../docs/02-trial-on-acme.md).
