@@ -1,12 +1,12 @@
-# Context-diet hook: trial on VerBodhProducts
+# Context-diet hook: trial on AcmeProducts
 
 - **Status:** tried on the Windows laptop, then uninstalled; plain rtk is back
-- **Source idea:** [claude-context-diet.md](claude-context-diet.md)
-- **Code (kept in the repo, not wired):** `.agents/hooks/shared/compress-tool-output.py`, `install-compress-hook.py`, `test_compress_tool_output.py`
+- **Source idea:** [01-source-claude-context-diet.md](01-source-claude-context-diet.md)
+- **Code:** [implementation/hooks/](../implementation/hooks/). The copy in use lives in the AcmeProducts workspace at `.agents/hooks/shared/` (not wired today).
 
 ## Why it was tried
 
-`python mcp/tools/rtk-savings.py` showed rtk cutting only about 25% of tool output inside this
+[02-rtk-savings.md](02-rtk-savings.md) showed rtk cutting only about 25% of tool output inside this
 folder (3.88M raw → 2.92M sent), and 80% of runs had no rtk filter at all. `rtk gain` claims
 95.6%, but six bogus grep rows logged at ~123M tokens make that number wrong.
 
@@ -20,7 +20,7 @@ folder (3.88M raw → 2.92M sent), and 80% of runs had no rtk filter at all. `rt
 - **rtk made secondary:** the PreToolUse entry calls the hook script, which skips rtk for the
   commands the compressor owns (grep, rg, find, fd, git log/status, test and build logs) and
   runs `rtk hook claude` for everything else.
-- **Only inside VerBodhProducts.** Sessions in any other folder (FPT work) kept plain rtk.
+- **Only inside AcmeProducts.** Sessions in any other folder (Initech day-job work) kept plain rtk.
 - **Both laptops:** `install-compress-hook.py` writes the wiring into `~/.claude/settings.json`
   with `python` on Windows and `python3` on the Mac. `--uninstall` puts plain rtk back.
 
@@ -36,10 +36,10 @@ folder (3.88M raw → 2.92M sent), and 80% of runs had no rtk filter at all. `rt
 | Check | Result |
 |---|---|
 | Tests (helper stubbed) | 9 of 9 pass |
-| Real Sonnet call, `grep -rn fn Projects/beacon` | 3,643 → 550 tokens, 9.4 s |
+| Real Sonnet call, `grep -rn fn Projects/lighthouse-app` | 3,643 → 550 tokens, 9.4 s |
 | Fresh Claude session running the same grep | 3,642 → 449 tokens, 10.4 s; rtk did not rewrite it |
 | rtk on other commands (`ls -la`) | unchanged, same output as rtk alone |
-| Outside the folder (`C:\Projects\URA`) | rtk on for every command, nothing compressed |
+| Outside the folder (`C:\Projects\Initech`) | rtk on for every command, nothing compressed |
 | Ledger total | 2 outputs, ~7,285 → ~999 tokens (86.3% cut), 0 errors |
 
 ## Not proved
