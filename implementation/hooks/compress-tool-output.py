@@ -11,7 +11,7 @@ model reads them, and keep rtk as the second line for everything else.
 
 Only acts in sessions whose cwd is inside this workspace (AcmeProducts); everywhere else
 the old behaviour stands: rtk on, nothing compressed. Fails open: any error, and Claude
-sees the original output. Adapted from wiki/12-Posts/Cost-on-Token/claude-context-diet.md.
+sees the original output. Adapted from wiki/17-Posts/Cost-on-Token/claude-context-diet.md.
 Wired by install-compress-hook.py; test with test_compress_tool_output.py.
 """
 import hashlib
